@@ -1,0 +1,45 @@
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir hw1 
+3) Зайти в папку - cd hw1 (либо указываем полный путь /home/ildana)
+4) Создать 3 папки - mkdir hw2 hw3 hw4 
+5) Зайти в любоую папку - cd hw2  ((либо указываем полный путь /home/ildana/hw2)
+6) Создать 5 файлов (3 txt, 2 json) - touch file1.txt file2.txt file3.txt file1.json file2.json
+7) Создать 3 папки - mkdir hw5 hw6 hw7
+8) Вывести список содержимого папки  - ls -la
+9) Открыть любой txt файл - cat file1.txt
+10) написать туда что-нибудь, любой текст - cat >>file1.txt (любой текст) ^C
+11) сохранить и выйти - ^C
+12) Выйти из папки на уровень выше - cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv file2.txt file1.json ~/ildana/hw2/hw5 
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку - cp ~/ildana/hw1/hw4/file2.txt file1.json ~/ildana/hw1/hw3
+15) Найти файл по имени - find . -name "file1.txt" 
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает -     grep fil1 file3.txt
+17) вывести несколько первых строк из текстового файла - head -n 2 file3.txt
+18) вывести несколько последних строк из текстового файла - tail -n 2 file.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает -         less file3.txt
+20) вывести дату и время - date
+
+
+Задание *
+1) Отправить http запрос на сервер. http://162.55.220.72:5005/terminal-hw-request
+1.1) GET - curl http://162.55.220.72:5005/terminal-hw-request
+     curl "http://162.55.220.72:5005/get_method?name=Ildana&age=39"
+     ["Ildana","39"]
+
+1.2) Получение заголовков HTTP- curl -I http://162.55.220.72:5005/terminal-hw-request
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+   vim script2.sh
+
+   #1/bin/bash
+   cd ildana
+   mkdir hw2 hw3 hw4
+   cd hw2
+   touch file1.txt file2.txt file3.txt file1.json file2.json
+   mkdir hw5 hw6 hw7
+   ls -la
+   mv file2.txt file1.json ~/ildana/hw2/hw5
+
+   bash script1.sh
+
+
